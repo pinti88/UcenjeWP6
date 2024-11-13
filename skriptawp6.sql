@@ -1,5 +1,5 @@
 ﻿-- Ovo je SQL skripta
---
+--prebacujem se na master bazu
 
 use master;
 go
@@ -9,7 +9,7 @@ go
 
 create database edunovawp6;
 go
-
+--kreiram novu bazu
 use edunovawp6;
 go
 

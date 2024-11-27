@@ -49,7 +49,7 @@ sifra int not null primary key identity(1,1),
  naknada decimal(10,2)
  );
 
- insert into korisnici(ime, prezime,email,telefonski_broj
+ insert into korisnici(ime, prezime,email,telefonski_broj)
  values
 ('Ivan', 'Ivić', 'ivan.ivic@email.com', '1234567890'),
 ('Ana', 'Anić', 'ana.anic@email.com', '0987654321'),
@@ -62,7 +62,7 @@ sifra int not null primary key identity(1,1),
 ('Milena', 'Milenković', 'milena.milenkovic@email.com', '7788990011'),
 ('Jelena', 'Jelenković', 'jelena.jelenkovic@email.com', '8899001122');
 
-insert into walleti(wallet_id, mreza, korisnik_id,kljuc)
+insert into walleti(mreza, korisnik_id,kljuc)
 values 
 ('Bitcoin', 1, '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'),
 ('Ethereum', 2, '0x5bD72B66d9a31E5329A7124E63F1C9cF1F9f00E5'),
@@ -75,8 +75,23 @@ values
 ('Solana', 9, 'B5TBsKw2g9UNuBbeDAfugC9TmtMR1DbK5b6U6DFhNe73'),
 ('Bitcoin', 10, '1BQdf7kLgHg5TVK9qbz5HjUbAEMt9MhZL6');
 
-insert into kriptovalute(ime, simbol, cjena, trzisna_vrjednost, volumen
+insert into kriptovalute(ime, simbol, cijena, trzisna_vrjednost, volumen)
 values
-);
+('Bitcoin', 'BTC', 950000.00, 640000000000.00, 5000000000.00),
+('Ethereum', 'ETH', 3500.00, 240000000000.00, 3000000000.00),
+('Solana', 'SOL', 240.00, 8000000000.00, 150000000.00),
+('Ripple', 'XRP', 1.45, 24000000000.00, 2000000000.00),
+('Dogecoin', 'DOGE', 0.40, 11000000000.00, 20000000000.00);
 
+insert into kriptowallet(wallet_id, kripto_id) 
+values 
+(1, 1),(2, 2),(3, 3), (4, 1), (5, 2), (6, 3), (7, 1), (8, 2), (9, 3), (10,1); 
+
+insert into transakcije(kolicina, kripto_id, naknada)
+values  
+(1.00, 1, 0.01),   
+(10.00, 2, 0.1),    
+(100.00, 3, 0.5),   
+(200.00, 4, 0.2),   
+(500.00, 5, 5.00);  
 

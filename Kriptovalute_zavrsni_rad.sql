@@ -44,7 +44,7 @@ kripto_id int not null references kriptovalute(kripto_id)
 
 
 create table transakcije( 
-sifra int not null primary key identity(1,1),
+transakcija_id int not null primary key identity(1,1),
  kolicina decimal(15,2),
  kripto_id int not null references kriptovalute(kripto_id),
  naknada decimal(10,2)

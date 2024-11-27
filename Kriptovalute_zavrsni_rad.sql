@@ -13,7 +13,7 @@ go
 use kriptovalute;
 
 create table korisnici(
-sifra int not null primary key identity(1,1),
+korisnik_id int not null primary key identity(1,1),
 ime varchar(50) not null,
 prezime varchar(50) not null,
 email varchar(50),
@@ -23,7 +23,8 @@ telefonski_broj varchar(50)
 create table walleti(
 wallet_id int not null primary key identity(1,1),
 mreza varchar(50),
-korisnik_id int not null references korisnici(sifra),
+korisnik_id int not null references korisnici(
+korisnik_id),
 kljuc varchar(50) not null
 );
 
@@ -65,14 +66,14 @@ sifra int not null primary key identity(1,1),
 insert into walleti(mreza, korisnik_id,kljuc)
 values 
 ('Bitcoin', 1, '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'),
-('Ethereum', 2, '0x5bD72B66d9a31E5329A7124E63F1C9cF1F9f00E5'),
+('Dogecoin', 2, '0x5bD72B66d9a31E5329A7124E63F1C9cF1F9f00E5'),
 ('Solana', 3, 'B2D9zD27yG55cWs7eGGzV3TChmjEx5G9gTTmFAmYzqV'),
-('Bitcoin', 4, '1N2F1Mb7KGVpPTp5H5u1u3h7sX3dZaAhY'),
+('Ripple', 4, '1N2F1Mb7KGVpPTp5H5u1u3h7sX3dZaAhY'),
 ('Ethereum', 5, '0x0F8c92c23B4439B6023A60D790129e97C16756a'),
 ('Solana', 6, 'B6ERmi9gZaNqxhwALnNBHwr8rYKnKBG5XTVo1dMhkEC'),
-('Bitcoin', 7, '1A9HX3HFgPyfw75eH8xVckFWxz3y6XvHDk'),
+('Dogecoin', 7, '1A9HX3HFgPyfw75eH8xVckFWxz3y6XvHDk'),
 ('Ethereum', 8, '0x6F1FDC8c95A7dB63510abD4F9B772fe006e3Bc4D'),
-('Solana', 9, 'B5TBsKw2g9UNuBbeDAfugC9TmtMR1DbK5b6U6DFhNe73'),
+('Ripple', 9, 'B5TBsKw2g9UNuBbeDAfugC9TmtMR1DbK5b6U6DFhNe73'),
 ('Bitcoin', 10, '1BQdf7kLgHg5TVK9qbz5HjUbAEMt9MhZL6');
 
 insert into kriptovalute(ime, simbol, cijena, trzisna_vrjednost, volumen)

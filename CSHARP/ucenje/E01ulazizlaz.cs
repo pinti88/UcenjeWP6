@@ -16,12 +16,15 @@ namespace ucenje
             
             
             //ovo je izlaz
-            Console.WriteLine("hello");
+            Console.Write("unesi svoje ime: ");
             
             
             //ulaz podataka u program 
             string Ime = Console.ReadLine();    
-            Console.WriteLine(Ime);
+            Console.WriteLine("unjeli ste" + Ime);
+
+            //formatirani nacin ispisa 
+            Console.WriteLine( "unjeli ste {0}. bravo!", Ime);
 
         }
        

@@ -4,33 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ucenje
+namespace Ucenje
 {
-    internal class E01ulazizlaz
+    internal class E01UlazIzlaz
     {
 
-
-        public static void izvedi() 
+        public static void Izvedi()
         {
-            
-            
-            
-            //ovo je izlaz
-            Console.Write("unesi svoje ime: ");
-            
-            
-            //ulaz podataka u program 
-            string Ime = Console.ReadLine();    
-            Console.WriteLine("unjeli ste" + Ime);
+            // Ovo je izlaz
+            Console.Write("Unesi svoje ime: ");
 
-            //formatirani nacin ispisa 
-            Console.WriteLine( "unjeli ste {0}. bravo!", Ime);
+
+            // Ulaz podataka u program
+            string Ime = Console.ReadLine();
+
+            Console.WriteLine("Unijeli ste " + Ime);
+
+            // formatirani način ispisa
+            Console.WriteLine("Unijeli ste {0}. Bravo!", Ime);
 
         }
-       
 
 
-
-       
-        }
+    }
 }

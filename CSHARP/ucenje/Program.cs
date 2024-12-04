@@ -2,7 +2,17 @@
 
 using Ucenje;
 
-E01UlazIzlaz.Izvedi();
+E03Z1.Izvedi();
+
+//E03operatori.Izvedi();
+
+
+//E02Z1.Izvedi();
+
+//E02VarijableTipovipodataka.Izvedi();
+
+
+//E01UlazIzlaz.Izvedi();
 
 // komentar jedna linija
 

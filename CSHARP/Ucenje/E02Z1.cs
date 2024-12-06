@@ -11,8 +11,23 @@
         public static void Izvedi()
         {
 
-            //ovdje se piše rješenje tadatka
-           
+            internal class E02Z1
+        {
+            public static void Izvedi()
+            {
+                Console.Write("unesi ime: ");
+                string ime = Console.ReadLine();
+                Console.WriteLine("unesi broj godina (cijeli broj): ");
+                int godine = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("osoba {0} ima {1} godina.", ime, godine);
+
+
+
+
+
+            }
+
 
         }
 

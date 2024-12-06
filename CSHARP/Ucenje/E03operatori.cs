@@ -1,84 +1,90 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ucenje
+﻿namespace Ucenje
 {
-    internal class E03operatori
+    internal class E03Operatori
     {
+
         public static void Izvedi()
         {
-            //console.Writeline("E03):
-            //operatori rad s varijablama 
-            //= je dodjela vrijednosti 
-            // == dodjela jednakosti -> bool 
 
-            int i = 7; // sada zamislimo da je korisnik unjeo 7
+            //Console.WriteLine("E03");
+            // operatori za rad s varijablama
+            // = je dodjeljivanje vrijednost
+            // == provjera jednakosti -> bool
 
-            Console.WriteLine(i==7);
+            int i = 7; // sada zamislimo da je korisnik unio 7
 
-            // operatori +,-,*,/
+            Console.WriteLine(i == 6);
+
+            // operatori +, -, *, /
 
             int k = 2, l = 1;
 
-            Console.WriteLine(l/k); // jeljenje 2 int daje int 
+            Console.WriteLine(l / k); // djeljenje dva int daje int
 
-            // mehanizam cast -> interpretacija broja u drugom tipu podatka 
+            // mehanizam cast -> interpretacija broja u drugom tipu podatka
+            Console.WriteLine(l / (float)k);
 
-            Console.WriteLine(l/(float)k);
+            // != nije jednako
 
-
-            //!= -> nije jednako 
-            Console.WriteLine(i!=k);
+            Console.WriteLine(i != k);
 
             // operator modulo %
 
-            Console.WriteLine("5%2={0}",5 % 2 );
+            Console.WriteLine("5%2={0}", 5 % 2);
 
             Console.WriteLine("4%2={0}", 4 % 2);
 
+            // AUTOMATSKO FORMATIRANJE CTRL + K + D
 
-            // uvecavanje za 1 
+            // uvećavanje za 1
 
             int b = 0;
 
-            // uvecaj za 1 
+            // uvećaj za 1
+            b = b + 1; //1
 
-            b = b + 1;
+            // kraće
+            b += 1; //2
 
-            // kraće 
+            //najkraće
+            b++; //3
 
-            b += 1;
-
-            //najkraće 
-
-            b++;
-
-            
+            // gornja tri primjera vrijede i za -, prva dva gornja vrijede i za * i /
 
             Console.WriteLine(b);
 
-            // incremnet i decrement (i++ i i--)
+            // increment i decrement (i++ i i--)
 
             b = 0;
 
-            // b++ prvo koristi pa uveća 
-            Console.WriteLine(b++);
+            // b++ prvo koristi pa uveća
+            Console.WriteLine(b++); //0
 
-            //++b prvo uveća pa onda koristi 
-            Console.WriteLine(++b);
+            // ++b prvo uveća pa koristi
+            Console.WriteLine(++b); //2
 
-            // ova pravila isto vrijede i za b-- te --b
+            // isto vrijedi i za b-- te --b
 
             int t = 0, c = 1;
-            t = c++ + t;
-            c += ++t;
-            Console.WriteLine(c+t);
+            t = c++ + t; // t = 1, c = 2
+            c += --t; // c = 2, t = 0
+            Console.WriteLine(c+t); // 2
+
+
+
+
+
+
+
+
+
+
+
 
 
 
         }
+
+
     }
 }

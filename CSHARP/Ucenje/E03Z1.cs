@@ -1,7 +1,6 @@
 ﻿namespace Ucenje
 {
 
-
     // Program od korisnika unosi dva cijela broja
     // Program ispisuje u novim redovima
     // 1. zbroj
@@ -9,7 +8,6 @@
     // 3. umnožak
     // 4. zbroj kvadrata prvog i drugog broj
     // 5. kvocijent prvog i drugog broja
-
     internal class E03Z1
     {
         public static void Izvedi()
@@ -44,22 +42,13 @@
 
             // kvocijent prvog i drugog broja 
 
-           int kvocijent = prvibroj % drugibroj;
+            int kvocijent = prvibroj % drugibroj;
             Console.WriteLine("kvocijent: " + kvocijent);
-            
-            
-        
-        
+
+
+
+
         }
-            
 
-
-
-
-    
-    
-    
-    
     }
-
 }

@@ -30,12 +30,14 @@ namespace Ucenje
 
                 Console.Write(znakovigrad[i]);
             }
+            Console.WriteLine();
 
             for (int i = 0; i < grad.Length; i++) 
             {
                 Console.Write(grad[i]);
 
             }
+            Console.WriteLine();
 
 
             foreach(char znak in znakovigrad)
@@ -43,15 +45,19 @@ namespace Ucenje
                 Console.Write(znak);
 
             }
+            Console.WriteLine();
 
             foreach(char c in grad)
             {
                 Console.WriteLine(c);
             }
+            Console.WriteLine();
+
+            Console.WriteLine();
 
             for (int i = grad.Length - 1; i >= 0; i--)
             {
-                Console.Write(i);
+              Console.Write(grad[i]);
             }
 
             

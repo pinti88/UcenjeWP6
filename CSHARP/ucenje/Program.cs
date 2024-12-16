@@ -2,7 +2,16 @@
 
 using Ucenje;
 
-E10Z2.Izvedi();
+E12Z1.Izvedi();
+
+//E12Metode.Izvedi();
+
+
+//E11Z1lose.Izvedi();
+
+//E11trycatch.Izvedi();
+
+//E10Z2.Izvedi();
 
 //E10Z.Izvedi();
 

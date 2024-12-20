@@ -8,7 +8,7 @@ namespace Ucenje
 {
     internal class E12Metode
     {
-       public static void Izvedi()
+        public static void Izvedi()
         {
             // metode se sastoje od 2 dijela
             // 1. ijelo metode
@@ -20,7 +20,7 @@ namespace Ucenje
             Tip2(7);
             Tip2(5);
 
-            Tip2(10,"Poziv druge varijante metode Tip2");
+            Tip2(10, "Poziv druge varijante metode Tip2");
 
 
             int i = Tip3() + 1;
@@ -28,8 +28,8 @@ namespace Ucenje
 
             int[] niz = { 2, 5, 2, 1, 4, 1, 2, 4, 1, 2, 3 };
             Console.WriteLine(Tip4(niz));
-            Tip4(niz); 
-            
+            Tip4(niz);
+
         }
 
         // Tijelo metode
@@ -49,8 +49,8 @@ namespace Ucenje
                 Console.WriteLine(i);
             }
 
-        
-        
+
+
         }
 
         // potpis metode 
@@ -62,7 +62,7 @@ namespace Ucenje
             Tip2(x);
 
 
-        } 
+        }
         // tip 3 ne prima parametre ali vraca vrijednost
         private static int Tip3()
         {
@@ -78,7 +78,7 @@ namespace Ucenje
         private static int Tip4(int[] niz)
         {
             int sum = 0;
-            foreach(int i in niz)
+            foreach (int i in niz)
             {
                 sum += i;
             }
@@ -101,16 +101,40 @@ namespace Ucenje
                     return int.Parse(Console.ReadLine());
 
                 }
-                catch 
+                catch
                 {
                     Console.WriteLine("Pronlem kod ucitanja broja");
-                    
+
+                }
+            }
+        }
+               public static int UcitajCijeliBroj(string poruka, int min, int max)
+        {
+            int i;
+            while (true)
+            {
+                Console.WriteLine(poruka);
+                try
+                {
+                    i=int.Parse(Console.ReadLine());
+                    if (i < min || i > max)
+                    {
+                        Console.WriteLine("Broj nije u danom rasponu {0} - {1} ", min, max);
+                        continue;
+                    }
+                    return i;
+                
+                
+                }
+
+                catch
+                {
+                    Console.WriteLine("Problem kod ucitanja broja");
+
                 }
             }
 
-
-            
-        } 
+        }
         public static string UcitajString(string poruka)
         {
             string s = "";
@@ -118,7 +142,7 @@ namespace Ucenje
             {
                 Console.WriteLine(poruka);
                 s = Console.ReadLine().Trim();
-                if(s.Length == 0)
+                if (s.Length == 0)
                 {
                     Console.WriteLine("obavezan unos");
                     continue;

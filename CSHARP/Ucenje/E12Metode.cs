@@ -150,6 +150,14 @@ namespace Ucenje
                 return s;
             }
         }
+        
+        
+        public static bool UcitajBool(string poruka, string uvijetZaTrue)
+        {
+            Console.Write(poruka);
+            return Console.ReadLine().Trim().ToUpper() == uvijetZaTrue.ToUpper();
+
+        }
 
     }
 }

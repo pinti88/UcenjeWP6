@@ -12,37 +12,49 @@ namespace Ucenje
 
         public static void Izvedi()
         {
-            Console.Write("Unesi izraz: ");
-            string izraz = Console.ReadLine();
-            Console.WriteLine(izraz);
-            if (izraz.Length%2 == 0)
+            string s = "RužanEdoOdeNaŽur";
+            Console.WriteLine(string.Join(':',s.ToCharArray()));
+
+            Console.WriteLine("palindrom");
+
+            string izraz = E12Metode.UcitajString("Unesi izraz za provjeru palindroma: ");
+
+            bool palindrom = true;
+            izraz = izraz.ToUpper();
+            
+            //ispisi prvo slovo
+            Console.WriteLine(izraz[0]);
+            
+            //ispisati zdanje slovo
+            Console.WriteLine(izraz[izraz.Length - 1]);
+
+            // ispisi drugo slovo
+            Console.WriteLine(izraz[1]);
+            
+            //ispisi predzadnje slovo
+            Console.WriteLine(izraz[izraz.Length - 1 - 1]);
+            
+            
+            
+            for (int i = 0; i < izraz.Length / 2; i++)
+
             {
-                Console.WriteLine("parno");
-                bool palindorm = true;
-                for (int i = 0; i < izraz.Length / 2; i++)
+                if (izraz[i] == izraz[izraz.Length-1 - i])
                 {
-                    if (izraz[i] != izraz[izraz.Length - 1 - i])
-                    {
-                        palindorm = false;
-
-                        break;
-                    }
+                    palindrom = false;
+                    break;
                 }
-                Console.WriteLine(palindorm ? "DA" : "NE" );
-                
-
             }
-            else
-            {
-                Console.WriteLine("neparno");
-
-            }
+            Console.WriteLine("Izraz {0} {1} palindorm,", izraz, palindrom  ? "JE" : "NIJE" );
 
 
 
 
-                
+
+
         }
+
+
 
 
 

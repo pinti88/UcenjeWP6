@@ -4,7 +4,7 @@ using Ucenje;
 
 //E15Subota.Izvedi();
 
-//E14Z1.Izvedi();
+E14Z1.Izvedi();
 
 //E13Z2.Izvedi();
 

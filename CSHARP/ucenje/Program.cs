@@ -2,9 +2,11 @@
 
 using Ucenje;
 
+CiklicnaTablica.Izvedi();
+
 //E15Subota.Izvedi();
 
-E14Z1.Izvedi();
+//E14Z1.Izvedi();
 
 //E13Z2.Izvedi();
 
@@ -23,7 +25,7 @@ E14Z1.Izvedi();
 
 //E10Z2.Izvedi();
 
-E10Z.Izvedi();
+//E10Z.Izvedi();
 
 //E10foreachpetlja.Izvedi();
 

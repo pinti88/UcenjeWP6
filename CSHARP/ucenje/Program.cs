@@ -2,7 +2,15 @@
 
 using Ucenje;
 
-GeneratorLozinke.Izvedi();
+
+
+
+
+
+
+new Ucenje.E17KlasaObjekt.Program();
+
+//GeneratorLozinke.Izvedi();
 
 //Z10kalkulator.Izvedi();
 

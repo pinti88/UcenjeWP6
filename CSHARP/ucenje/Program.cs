@@ -2,7 +2,29 @@
 
 using Ucenje;
 
-CiklicnaTablica.Izvedi();
+GeneratorLozinke.Izvedi();
+
+//Z10kalkulator.Izvedi();
+
+//Z9sortiranjeniza.Izvedi();
+
+//Z8pretvorbatemperature.Izvedi();
+
+//Z7zbrojsamoglasnika.Izvedi();
+
+//Z6preokretstringa.Izvedi();
+
+//Z5fibonaccijevniz.Izvedi();
+
+//Z4prosjekocjena.Izvedi();
+
+//Z3zbrojniza.Izvedi();
+
+//Z2provjerabroja.Izvedi();
+
+//Z1pravokutnik.Izvedi();
+
+//CiklicnaTablica.Izvedi();
 
 //E15Subota.Izvedi();
 

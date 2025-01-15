@@ -65,6 +65,7 @@ namespace Ucenje.E17KlasaObjekt
                 Console.WriteLine("{0} {1}", p.Ime, p.Prezime);
             }
             Console.WriteLine("****************************************************");
+            
 
             grupa.DetaljiGrupe();
 

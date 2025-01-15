@@ -14,7 +14,6 @@ namespace Ucenje.E17KlasaObjekt
         public int Sifra { get; set; } //OOP princip ućahurivanja
         public string? Ime { get; set; } //  ? oznaćava ako ime moze biti null
         public string? Prezime { get; set; }
-
         public Mjesto? Mjesto { get; set; }
 
 

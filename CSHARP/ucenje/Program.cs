@@ -6,9 +6,9 @@ using Ucenje;
 
 
 
+//new Ucenje.E18NasljedjivanjePolimorfizam.Program("E18");
 
-
-new Ucenje.E17KlasaObjekt.Program();
+//new Ucenje.E17KlasaObjekt.Program();
 
 //GeneratorLozinke.Izvedi();
 

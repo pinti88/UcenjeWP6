@@ -3,7 +3,7 @@
 using Ucenje;
 
 
-
+new Ucenje.E19GenericiLambdaexstenzije.Program();
 
 
 //new Ucenje.E18NasljedjivanjePolimorfizam.Program("E18");

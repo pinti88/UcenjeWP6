@@ -3,7 +3,11 @@
 using Ucenje;
 
 
-LJubavniKalkulator.Izvedi();
+new E21Subota();
+
+//new Ucenje.E20KonzolnaAplikacija.Izbornik();
+
+//LJubavniKalkulator.Izvedi();
 
 //new Ucenje.E19GenericiLambdaexstenzije.Program();
 

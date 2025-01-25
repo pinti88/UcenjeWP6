@@ -98,6 +98,27 @@
                 }
                 return s;
             }
+
+        }
+
+        internal static string UcitajString(string poruka, int max, bool obavezno, string staravjrednost)
+        {
+            string s;
+            while (true)
+            {
+                Console.Write(poruka + "("+staravjrednost+") 0 za odustani" + ": ");
+                s = Console.ReadLine().Trim();
+                if (s == "0")
+                {
+                    return staravjrednost;
+                }
+                if ((obavezno && s.Length == 0) || s.Length > max)
+                {
+                    Console.WriteLine("Unos obavezan, maksimalno dozvoljeno {0} znakova", max);
+                    continue;
+                }
+                return s;
+            }
         }
 
         internal static string UcitajString(string stara,string poruka, int max, bool obavezno)

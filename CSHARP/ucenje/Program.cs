@@ -7,7 +7,7 @@ using Ucenje;
 
 //new Ucenje.E20KonzolnaAplikacija.Izbornik();
 
-LJubavniKalkulator.Izvedi();
+//LJubavniKalkulator.Izvedi();
 
 //new Ucenje.E19GenericiLambdaexstenzije.Program();
 

@@ -69,25 +69,29 @@ namespace Ucenje
         }
 
         static int IzracunajPostotak(int[] vrijednosti)
+    {
+        
+        if (vrijednosti.Length == 2)
         {
-            while (vrijednosti.Length > 2)
-            {
-                int[] noviNiz = new int[(vrijednosti.Length + 1) / 2];
-
-                for (int i = 0; i < vrijednosti.Length / 2; i++)
-                {
-                    noviNiz[i] = (vrijednosti[i * 2] + vrijednosti[i * 2 + 1]) % 10;
-                }
-
-                if (vrijednosti.Length % 2 != 0)
-                {
-                    noviNiz[noviNiz.Length - 1] = vrijednosti[vrijednosti.Length - 1];
-                }
-
-                vrijednosti = noviNiz;
-            }
-
             return vrijednosti[0] * 10 + vrijednosti[1];
         }
+
+        
+        int[] noviNiz = new int[(vrijednosti.Length + 1) / 2];
+
+        for (int i = 0; i < vrijednosti.Length / 2; i++)
+        {
+            noviNiz[i] = (vrijednosti[i * 2] + vrijednosti[i * 2 + 1]) % 10;
+        }
+
+        
+        if (vrijednosti.Length % 2 != 0)
+        {
+            noviNiz[noviNiz.Length - 1] = vrijednosti[vrijednosti.Length - 1];
+        }
+
+        
+        return IzracunajPostotak(noviNiz);
+    }
     }
 }

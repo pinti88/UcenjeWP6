@@ -9,6 +9,5 @@ namespace EdunovaAPP.Models
         public decimal? CijenaSmjera { get; set; }
         public DateTime? IzvodiSeOd { get; set; }
         public bool? Vaucer { get; set; }
-
     }
 }

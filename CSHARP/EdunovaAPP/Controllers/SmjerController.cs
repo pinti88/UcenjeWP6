@@ -8,18 +8,18 @@ namespace EdunovaAPP.Controllers
     [Route("api/v1/[controller]")]
     public class SmjerController : ControllerBase
     {
-        // Koristimi dependency injection
-        // 1. definiramo privatno svojstvo
 
+        // koristimo dependency injection
+        // 1. definiramo privatno svojstvo
         private readonly EdunovaContext _context;
 
-        // // Koristimi dependency injection
-        // 2. prosljedis instancu kroz konstruktor
-
+        // koristimo dependency injection
+        // 2. proslijediš instancu kroz konstruktor
         public SmjerController(EdunovaContext context)
         {
             _context = context;
         }
+
 
         [HttpGet]
         public IActionResult Get()
@@ -27,7 +27,6 @@ namespace EdunovaAPP.Controllers
             try
             {
                 return Ok(_context.Smjerovi);
-
             }
             catch (Exception e)
             {
@@ -35,11 +34,9 @@ namespace EdunovaAPP.Controllers
             }
         }
 
-
         [HttpGet]
         [Route("{sifra:int}")]
-        public IActionResult GetBySifra(int sifra)
-        {
+        public IActionResult GetBySifra(int sifra) {
             try
             {
                 var s = _context.Smjerovi.Find(sifra);
@@ -48,13 +45,13 @@ namespace EdunovaAPP.Controllers
                     return NotFound();
                 }
                 return Ok(s);
-
             }
             catch (Exception e)
             {
                 return BadRequest(e);
             }
         }
+
 
         [HttpPost]
         public IActionResult Post(Smjer smjer)
@@ -64,31 +61,30 @@ namespace EdunovaAPP.Controllers
                 _context.Smjerovi.Add(smjer);
                 _context.SaveChanges();
                 return StatusCode(StatusCodes.Status201Created, smjer);
-
-
             }
             catch (Exception e)
             {
                 return BadRequest(e);
             }
-
-
-
         }
 
 
         [HttpPut]
         [Route("{sifra:int}")]
-        [Produces("Application/json")]
+        [Produces("application/json")]
         public IActionResult Put(int sifra, Smjer smjer)
         {
             try
             {
+
                 var s = _context.Smjerovi.Find(sifra);
+
                 if (s == null)
                 {
                     return NotFound();
                 }
+
+                // Rucno mapiranje, kasnije automapper
                 s.Naziv = smjer.Naziv;
                 s.CijenaSmjera = smjer.CijenaSmjera;
                 s.IzvodiSeOd = smjer.IzvodiSeOd;
@@ -96,20 +92,14 @@ namespace EdunovaAPP.Controllers
 
                 _context.Smjerovi.Update(s);
                 _context.SaveChanges();
-                return Ok(new { poruka = "uspjesno promjenjeno" });
-
-
-
-
+                return Ok(new { poruka= "Uspješno promijenjeno" });
             }
             catch (Exception e)
-
             {
                 return BadRequest(e);
             }
-
-
         }
+
 
         [HttpDelete]
         [Route("{sifra:int}")]
@@ -118,21 +108,21 @@ namespace EdunovaAPP.Controllers
             try
             {
                 var s = _context.Smjerovi.Find(sifra);
-                if(s== null)
+                if (s == null)
                 {
                     return NotFound();
                 }
                 _context.Smjerovi.Remove(s);
                 _context.SaveChanges();
-                return Ok(new { poruka = "uspjesno dodana" });
-
+                return Ok(new { poruka = "Uspješno obrisano" });
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                return BadRequest();
+                return BadRequest(e);
             }
-
         }
+
+
 
 
     }
